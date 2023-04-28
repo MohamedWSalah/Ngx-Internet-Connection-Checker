@@ -5,6 +5,48 @@
     "@angular/common": "^14.2.0",
     "@angular/core": "^14.2.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MohamedWSalah/Ngx-Internet-Connection-Checker.git"
+  },
+  "author": {
+    "name": "Mohamed Salah",
+    "email": "mohamedwsalah@outlook.com"
+  },
+  "keywords": [
+    "angular",
+    "internet",
+    "intenet-checker",
+    "internet-connection-checker",
+    "network",
+    "network-checker",
+    "angular4",
+    "angular5",
+    "angular6",
+    "angular7",
+    "angular8",
+    "angular9",
+    "angular10",
+    "angular11",
+    "angular12",
+    "angular13",
+    "angular14",
+    "angular15",
+    "ngx",
+    "ng4",
+    "ng5",
+    "ng6",
+    "ng7",
+    "ng8",
+    "ng9",
+    "ng10",
+    "ng11",
+    "ng12",
+    "ng13",
+    "ng14",
+    "ng15",
+    "ivy"
+  ],
   "dependencies": {
     "tslib": "^2.3.0"
   }

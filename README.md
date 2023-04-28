@@ -1,27 +1,55 @@
-# InternetCheck
+# Ngx-Internet-Connection-Checker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
+Ngx-Internet-Connection-Checker is an Angular library that provides a simple way to check the user's internet connection status in an Angular application.
 
-## Development server
+<p align="center">
+  <h1 align="center">NgxInternetConnectionChecker</h1>
+</p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Installation
 
-## Code scaffolding
+`ngx-Internet-Connection-Checker` is available via [npm](https://github.com/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To install NgxInternetConnectionChecker using `npm`, run the following command:
 
-## Build
+```bash
+$ npm install ngx-Internet-Connection-Checker
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Usage
 
-## Running unit tests
+### importing the module
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To use NgxInternetConnectionChecker in your Angular application, import the `NgxInternetConnectionCheckerModule` into your module file:
 
-## Running end-to-end tests
+```typescript
+import { NgModule } from "@angular/core";
+import { NgxInternetConnectionCheckerModule } from "ngx-internet-connection-checker";
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+@NgModule({
+  imports: [
+    // Other module imports
+    NgxInternetConnectionCheckerModule,
+  ],
+  // Other declarations, providers, etc.
+})
+export class AppModule {}
+```
 
-## Further help
+## Using the component
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Once the module is imported, you can use the `ngx-internet-connection-checker` component in your templates:
+
+```html
+<ngx-internet-connection-checker></ngx-internet-connection-checker>
+```
+
+By default, the displayed text will be :
+`Internet Connection Lost` for offline connection.
+`Internet Connection Restored` for restored connection.
+
+You can pass the text you want to be displayed in both cases of offline and restoring connection as follows:
+
+```html
+<ngx-internet-connection-checker [onlineText]="'Your connection was restored'" [offlineText]="'You are offline'"></ngx-internet-connection-checker>
+```
