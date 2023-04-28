@@ -3,8 +3,8 @@ import { NgxInternetConnectionCheckerComponent } from './ngx-internet-connection
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  declarations: [NgxInternetConnectionCheckerComponent],
   imports: [CommonModule],
+  declarations: [NgxInternetConnectionCheckerComponent],
   exports: [NgxInternetConnectionCheckerComponent],
 })
-export class NgInternetConnectionCheckerModule {}
+export class NgxInternetConnectionCheckerModule {}
