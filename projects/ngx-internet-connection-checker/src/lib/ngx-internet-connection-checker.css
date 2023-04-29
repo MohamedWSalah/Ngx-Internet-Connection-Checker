@@ -10,6 +10,8 @@
   align-items: center;
   gap: 10px;
   width: 250px;
+  opacity: 0;
+  animation: fade-in 0.5s ease-in-out forwards;
 }
 .icc-popup.restored {
   background-color: #4caf50;
@@ -17,4 +19,13 @@
 .icon {
   height: fit-content;
   display: inline-flex;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

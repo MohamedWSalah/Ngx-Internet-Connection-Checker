@@ -43,18 +43,20 @@ export class NgxInternetConnectionCheckerComponent implements OnInit {
   }
 
   subscribeToConnectionStatus(): void {
+    let timeoutId: any;
     this.connectionCheckerService
       .getConnectionStatus()
       .pipe(
         tap((status) => {
           if (!status) {
+            clearTimeout(timeoutId);
             this.statusStyle = false;
             this.connectionStatusMessage = this.offlineText;
             this.isConnected = false;
           } else {
             this.statusStyle = true;
             this.connectionStatusMessage = this.onlineText;
-            setTimeout(() => {
+            timeoutId = setTimeout(() => {
               this.isConnected = true;
             }, 5000);
           }
