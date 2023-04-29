@@ -6,12 +6,21 @@ import { wifi, wifiOff } from './svgicons';
 @Component({
   selector: 'ngx-internet-connection-checker',
   template: `
-    <ng-container *ngIf="connectionStatusMessage && !isConnected">
-      <div class="icc-popup" [ngClass]="{ restored: statusStyle }">
-        <span
-          class="icon"
-          [innerHTML]="statusStyle ? wifiImg : wifiOffImg"
-        ></span>
+    <ng-container *ngIf="connectionStatusMessage">
+      <div
+        class="icc-popup restored"
+        *ngIf="!isConnected && statusStyle"
+        [style.background-color]="onlineColor"
+      >
+        <span class="icon" [innerHTML]="wifiImg"></span>
+        <span>{{ connectionStatusMessage }}</span>
+      </div>
+      <div
+        class="icc-popup"
+        *ngIf="!statusStyle"
+        [style.background-color]="offlineColor"
+      >
+        <span class="icon" [innerHTML]="wifiOffImg"></span>
         <span>{{ connectionStatusMessage }}</span>
       </div>
     </ng-container>
@@ -21,6 +30,8 @@ import { wifi, wifiOff } from './svgicons';
 export class NgxInternetConnectionCheckerComponent implements OnInit {
   @Input() offlineText: string = 'Internet Connection Lost';
   @Input() onlineText: string = 'Internet Connection Restored';
+  @Input() offlineColor: string = '#f44336';
+  @Input() onlineColor: string = '#4caf50';
   public isConnected: boolean = false;
   public statusStyle: boolean = false;
   public connectionStatusMessage: string | null = null;

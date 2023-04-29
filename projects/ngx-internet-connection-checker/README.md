@@ -1,5 +1,3 @@
-# Ngx-Internet-Connection-Checker
-
 Ngx-Internet-Connection-Checker is an Angular library that provides a simple way to check the user's internet connection status in an Angular application.
 
 <p align="center">

@@ -1,10 +1,12 @@
-# Ngx-Internet-Connection-Checker
-
 Ngx-Internet-Connection-Checker is an Angular library that provides a simple way to check the user's internet connection status in an Angular application.
 
 <p align="center">
   <h1 align="center">NgxInternetConnectionChecker</h1>
 </p>
+
+## Preview
+
+<img src="https://github.com/MohamedWSalah/Ngx-Internet-Connection-Checker/tree/master/src/assets/preview.png" alt="preview"/>
 
 ## Installation
 
@@ -44,12 +46,16 @@ Once the module is imported, you can use the `ngx-internet-connection-checker` c
 <ngx-internet-connection-checker></ngx-internet-connection-checker>
 ```
 
-By default, the displayed text will be :
-`Internet Connection Lost` for offline connection.
-`Internet Connection Restored` for restored connection.
+## Documentation
 
-You can pass the text you want to be displayed in both cases of offline and restoring connection as follows:
+`ngx-internet-connection-checker` could have the following inputs:
+| Name | Type | Default | Description |
+|------------ |--------------- |--------- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| offlineText | `string` | `Internet Connection Lost` | toggle dark mode |
+| onlineText | `string` | `Internet Connection Restored` | destroy when notification component unmount |
+| offlineColor | `string` | `#f44336` | duration of the notification when it appear on screen before hiding back |
+| onlineColor | `string` | `#4caf50` | derived from <code>eventsCallback</code>, callback function triggered when refresh is clicked during offline status |
 
-```html
-<ngx-internet-connection-checker [onlineText]="'Your connection was restored'" [offlineText]="'You are offline'"></ngx-internet-connection-checker>
-```
+## License
+
+Ngx-Internet-Connection-Checker is released under the MIT license.
