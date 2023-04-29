@@ -51,10 +51,10 @@ Once the module is imported, you can use the `ngx-internet-connection-checker` c
 `ngx-internet-connection-checker` could have the following inputs:
 | Name | Type | Default | Description |
 |------------ |--------------- |--------- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| offlineText | `string` | `Internet Connection Lost` | toggle dark mode |
-| onlineText | `string` | `Internet Connection Restored` | destroy when notification component unmount |
-| offlineColor | `string` | `#f44336` | duration of the notification when it appear on screen before hiding back |
-| onlineColor | `string` | `#4caf50` | derived from <code>eventsCallback</code>, callback function triggered when refresh is clicked during offline status |
+| offlineText | `string` | `Internet Connection Lost` | The displayed text for `lost` connection |
+| onlineText | `string` | `Internet Connection Restored` | The displayed text for `restored` connection |
+| offlineColor | `string` | `#f44336` | The popup background color for `lost` connection status |
+| onlineColor | `string` | `#4caf50` | The popup background color for `restored` connection statu |
 
 ## License
 
