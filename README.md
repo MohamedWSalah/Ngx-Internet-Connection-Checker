@@ -6,7 +6,7 @@ Ngx-Internet-Connection-Checker is an Angular library that provides a simple way
 
 ## Preview
 
-<img src="https://raw.githubusercontent.com/MohamedWSalah/Ngx-Internet-Connection-Checker/master/src/assets/preview.png" alt="preview"/>
+<img src="https://raw.githubusercontent.com/MohamedWSalah/Ngx-Internet-Connection-Checker/master/src/assets/preview.png" style="text-align: center;" alt="preview"/>
 
 ## Installation
 
